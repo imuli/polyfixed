@@ -1,0 +1,31 @@
+name: polyfixed
+version: 0.1.0
+synopsis: Polymorphic fixed point arithmatic
+maintainer: Imuli <i@imu.li>
+github: imuli/polyfixed
+license-file: UNLICENSE
+license: PublicDomain
+category: Numeric
+extra-source-files:
+  - CHANGELOG.md
+description: |
+  polyfixed provides fixed point realfrac instances for any integral base
+  number type, along with conversions between any such instances.
+
+ghc-options: -Wall
+
+dependencies:
+  - base >= 4.11 && < 5.0
+
+library:
+  source-dirs: src
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - hspec ^>=  2.7
+      - QuickCheck ^>= 2.14
+      - quickcheck-classes ^>= 0.6
+      - polyfixed
